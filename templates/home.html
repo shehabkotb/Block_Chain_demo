@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>
+      refresh to see changes
+    </h1>
+	  <h2>
+    /add?tx=transaction to be added<br/>
+	  /mine to mine a new block
+    </h2>
+    {% for block in blocks %}
+        <h4>
+          blocknumber: {{block.number}} <br/>
+          data: {{block.data}} <br/>
+          nounce: {{block.nounce}} <br/>
+          phash: {{block.phash}} <br/>
+          hash: {{block.hash}} <br/>
+        </h4>
+    {% endfor %}
+{% endblock content %}
